@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Sies</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $('a.nav-link').on('click', function(e) {
+        $('a.nav-link').removeClass('active');
+      });    
+    });
+      
+    
+    $(document).on('scroll', function(event) {
+        const anchorElements = $("a[name]").get();
+        for (let element of anchorElements) {
+          var y = element.getClientRects()[0].top;
+          if (y <= 0) {
+            const text = element.getAttribute('name');
+            $('a.nav-link').removeClass('active');
+            $(`a.nav-link[href='#${text}']`).addClass('active');
+          };
+        }
+    });
+
+    </script>
+
+
+  </head>
+
+  <body class="text-center">
+    <canvas id="renderCanvas" width="100%" height="100%"></canvas>
+    <div class="container">
+    
+    <header class="masthead mb-auto">
+    <div class="inner">
+        <nav class="nav nav-masthead justify-content-center fixed-top">
+        <a class="nav-link active" href="#Home">Home</a>
+        <a class="nav-link" href="#Projects">Projects</a>
+        <a class="nav-link" href="#Education">Education</a>
+        </nav>
+    </div>
+    </header>
+
+      <a name="Home"></a>
+      <section>
+          <div class="row vertical-center-whole">
+              <div class="col-sm-12">
+                <img src="imgs/profile.jpg" class="rounded-circle" alt="That's me" style="width: 20%; height: auto">
+                <h1>Siestorm Bensiesa</h1>
+                <p class="lead">Urbarn designer and developer passionate about photography.</p>
+              </div>
+          </div>
+          
+      </section>
+
+      <a name="Projects"></a>
+      <section>
+        <h1 class="section-title">Projects</h1>
+
+        <h3 class="project-title"><span>Project 1</span></h3>
+        <div class="row">
+            {% comment %} <div class="col-lg vertical-center">
+              <img src="imgs/graphtoolkit.png" class="img-thumbnail rounded" alt="Graph Toolkit">
+            </div>
+            <div class="col-lg">
+              <p class="text-justify">What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>
+            </div> {% endcomment %}
+        </div>
+
+        <h3 class="project-title"><span>project 2</span></h3>
+        <div class="row">
+            {% comment %} <div class="col-lg vertical-center">
+              <img src="imgs/harentz-cover.png" class="img-thumbnail rounded" alt="harentz">
+            </div>
+            <div class="col-lg">
+              <p class="text-justify">What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                 and you can <a href="https://play.google.com/store/apps/details?id=com.alephzerogames.harentz">give it a try on android</a>.
+              </p>
+            </div> {% endcomment %}
+        </div>
+
+        <h3 class="project-title"><span>project 3</span></h3>
+        <div class="row">
+            {% comment %} <div class="col-lg vertical-center">
+              <img src="imgs/regebe.png" class="img-thumbnail rounded" alt="regebe">
+            </div>
+            <div class="col-lg">
+              <p class="text-justify">What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>
+            </div> {% endcomment %}
+        </div>
+
+        <h3 class="project-title"><span>project 4</span></h3>
+        <div class="row">
+             {% comment %} <div class="col-lg vertical-center">
+              <img src="imgs/sre_logo.png" class="img-thumbnail rounded" alt="sre">
+            </div>
+            <div class="col-lg" >
+                <p class="text-justify">What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div> 
+                {% endcomment %}
+        
+
+        </div>
+
+        <h3 class="project-title"><span>project 5</span></h3>
+        <div class="row">
+         {% comment %} <div class="col-lg vertical-center">
+              <img src="imgs/tinyraytracer.png" class="img-thumbnail rounded" alt="sre">
+            </div>
+            <div class="col-lg" >
+              <p class="text-justify">What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>
+            </div> {% endcomment %}
+        </div>
+
+        
+
+        <h3 class="project-title"><span>project 6</span></h3>
+        <div class="row">
+            {% comment %} <div class="col-lg vertical-center">
+              <img src="imgs/dCloth.png" class="img-thumbnail rounded" alt="sre">
+            </div>
+            <div class="col-lg" >
+              <p class="text-justify">What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>
+            </div> {% endcomment %}
+        </div>
+      </section>
+
+      <a name="Education"></a>
+      <section>
+        <h1 class="section-title">Education</h1>
+        <div style="text-align: left">
+            <h4><em>2015 - 2019</em>  Bachelor’s Degree in Urban Design and Development</h4>
+            <p> The Technical University of Kenya </p>
+             <p>
+             What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+          <br />
+          <h4><em>2010 - 2014</em> Certificate of Secondary Education</h4>
+          <p> Kisii High School </p>
+          <p>
+            What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>  
+           
+          
+        </div>
+        
+      </section>
+
+      <hr>
+      <footer>
+        Template inspired by <a href="https://ar.pinterest.com/bensiesa/">Cover</a><br/>
+        &copy; Siestorm Bensiesa
+      </footer>
+
+    </div>
+
+  </body>
+
+  <script src="js/fractal.js"></script>
+</html>
